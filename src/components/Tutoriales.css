@@ -1,0 +1,152 @@
+/* Contenedor principal de la página de tutoriales */
+.tutoriales-container {
+  background-color: #1a1a1a; /* Fondo negro */
+  color: white; /* Texto en blanco */
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Título de la página */
+.tutoriales-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff6600; /* Naranja oscuro */
+  font-weight: bold;
+}
+
+/* Contenedor para el carrusel de tutoriales */
+.tutoriales-carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* Asegura que el carrusel no se desborde */
+  max-width: 100%; /* Asegura que el carrusel sea responsive */
+  flex-wrap: wrap;
+}
+
+/* Botones de flecha */
+.arrow {
+  background-color: transparent;
+  color: #ff6600; /* Naranja oscuro */
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  z-index: 10; /* Asegura que las flechas estén sobre otros elementos */
+}
+
+.arrow:hover {
+  transform: scale(1.2);
+}
+
+/* Contenedor de las tarjetas de tutorial */
+.tutorial-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Espacio entre las tarjetas */
+  transition: transform 0.3s ease;
+}
+
+/* Contenedor del tutorial */
+.tutorial-card {
+  background-color: #2b2b2b; /* Fondo gris oscuro para la tarjeta */
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0; /* Evita que las tarjetas se reduzcan de tamaño */
+}
+
+.tutorial-card:hover {
+  transform: scale(1.05); /* Efecto de hover para ampliar la tarjeta */
+}
+
+.tutorial-card video {
+  border-radius: 8px;
+  margin-bottom: 15px;
+  width: 100%;
+  height: 200px;
+}
+
+.tutorial-card h3 {
+  font-size: 1.5rem;
+  color: #ff6600; /* Naranja oscuro */
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Descripción del tutorial */
+.tutorial-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #ccc; /* Gris claro */
+  line-height: 1.4;
+}
+
+/* Botón de "Ver" */
+.tutorial-card button {
+  background-color: #ff6600; /* Naranja oscuro */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.tutorial-card button:hover {
+  background-color: #e65c00; /* Naranja más oscuro al pasar el mouse */
+}
+
+/* Contenedor de las etiquetas */
+.tags {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Estilo de las etiquetas */
+.tag {
+  background-color: #ff6600;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Mejorar la accesibilidad en pantallas pequeñas */
+@media (max-width: 768px) {
+  .tutorial-card {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .tutoriales-container h2 {
+    font-size: 2rem;
+  }
+
+  .tutoriales-carousel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

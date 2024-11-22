@@ -1,232 +1,134 @@
-/* src/components/WelcomePage.css */
-
 .welcome-page {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-/* Barra de navegación */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: black;
-    color: white;
-}
-
-.navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.navbar-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.navbar-links a:hover {
-    text-decoration: underline;
-}
-
-/* Contenido principal */
-.main-content {
+  }
+  
+  /* Contenido principal */
+  .main-content {
     flex-grow: 1;
     padding: 2rem;
     text-align: center;
-    background-image: url("./img/fomdo.jpg"); /* Ruta relativa al archivo CSS */
+    background-image: url("./img/fondo.jpg"); /* Ruta relativa al archivo CSS */
     background-size: cover;
     background-position: center;
     color: rgb(0, 0, 0);
-}
-
-/* Contenedor de texto de bienvenida */
-.welcome-text {
     display: flex;
-    flex-direction: column; /* Coloca el título y descripción uno debajo del otro */
-    align-items: center; /* Alinear el texto al centro */
-    margin-bottom: 1rem; /* Espacio debajo del texto */
-}
-
-/* Sección publicitaria */
-.advertisement {
-    display: flex; /* Usar flexbox para la imagen y el texto */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: flex-end; /* Alinear a la derecha */
-    margin: 2rem 0; /* Espaciado superior e inferior */
-}
-
-.advertisement-image {
-    width: 600px; /* Tamaño de la imagen */
-    height: auto; /* Mantener la proporción de la imagen */
-    margin-right: 70px; /* Espacio entre la imagen y el texto publicitario */
-    border-radius: 20px; /* Bordes redondeados */
-}
-
-/* Ajustes para el texto publicitario */
-.advertisement-text {
-    max-width: 580px; /* Limitar el ancho del texto publicitario */
-    text-align: left; /* Alinear texto a la izquierda */
-}
-
-.advertisement-text h2 {
-    font-size: 2.5rem; /* Aumentar el tamaño del título */
-    margin: 1rem 0; /* Espaciado superior e inferior */
-}
-
-.advertisement-text p {
-    font-size: 1.5rem; /* Aumentar el tamaño del párrafo */
-    margin: 1rem 0; /* Espaciado superior e inferior */
-}
-
-/* Botones */
-.buttons {
-    display: flex; /* Usar flexbox para los botones */
-    gap: 10px; /* Espacio entre botones */
-}
-
-.buttons button {
-    padding: 10px 15px; /* Espaciado interno del botón */
-    background-color: #ffa200; /* Color de fondo del botón */
-    color: rgb(0, 0, 0); /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar cursor al pasar por encima */
-    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
-}
-
-.buttons button:hover {
-    background-color: #f2cb30; /* Color al pasar el ratón sobre el botón */
-    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el ratón */
-}
-
-/* Pie de página */
-.footer {
-    background-color: black;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end; /* Alineamos el contenido al lado derecho */
+    padding-right: 10%;
+  }
+  
+  /* Contenedor de texto de bienvenida */
+  .welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  /* Sección publicitaria */
+  .advertisement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 2rem 0;
+  }
+  
+  .advertisement-image {
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+  }
+  
+  .advertisement-text {
+    max-width: 580px;
+    text-align: right;
+  }
+  
+  .advertisement-text h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+  
+  .advertisement-text h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  
+  .advertisement-text p {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  /* Botón con estilo bonito */
+  .button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilo para el video */
+  .recommended-video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .recommended-video {
+    max-width: 600px;
+    height: 350px;
+    margin-bottom: 1rem;
+  }
+  
+  .countdown-container {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Contenedor de academias */
+  .academies-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .academy-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .academy-image {
+    max-width: 300px;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+  }
+  
+  .academy-card .button {
+    width: 100%;
+  }
+  
+  /* Estilos para el pie de página */
+  .footer {
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 1rem;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline;
-}
-
-/* Espaciado y fuente */
-body {
-    font-family: 'Arvo', serif; /* Aplica la fuente Arvo a todo el cuerpo */
-}
-
-/* Contenedor de academias */
-.academies-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end; /* Alinea las tarjetas al final (derecha) */
-    gap: 1rem; /* Ajusta el espacio entre las tarjetas */
-    margin: 1rem 0; /* Reduce el margen superior e inferior */
-    padding-left: 20px; /* Agrega un poco de espacio desde la izquierda */
-    padding-right: 20px; /* Agrega un poco de espacio desde la derecha si deseas */
-}
-
-.academy-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centra el contenido dentro de la tarjeta */
-    margin: 1rem; /* Espaciado entre las tarjetas */
-}
-
-.academy-image {
-    width: 580px; /* Ancho fijo para todas las imágenes */
-    height: 200px; /* Alto fijo para todas las imágenes */
-    object-fit: cover; /* Mantiene la relación de aspecto y recorta la imagen si es necesario */
-    border-radius: 8px; /* Esquinas redondeadas opcionalmente */
-}
-
-.academy-title {
-    font-size: 1.2rem; /* Tamaño del texto del título */
-    margin: 1rem 0; /* Espaciado superior e inferior */
-}
-
-/* Botón de las academias */
-.button {
-    padding: 10px 15px; /* Espaciado interno del botón */
-    background-color: #ffa200; /* Color de fondo del botón */
-    color: rgb(0, 0, 0); /* Color del texto del botón */
-    border: none; /* Sin borde */
-    border-radius: 5px; /* Bordes redondeados */
-    cursor: pointer; /* Cambiar cursor al pasar por encima */
-    width: 580px; /* Ancho fijo igual al de la imagen */
-    margin-top: 10px; /* Espaciado superior opcional */
-    transition: background-color 0.3s, transform 0.2s; /* Transiciones suaves */
-}
-
-.button:hover {
-    background-color: #f2cb30; /* Color al pasar el ratón sobre el botón */
-    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el ratón */
-}
-
-/* Título de la sección de academias */
-.academies-title {
-    font-size: 24px; /* Ajusta el tamaño del texto */
-    font-weight: bold; /* Pone el texto en negrita */
-    margin: 1rem auto; /* Espacio superior e inferior y centra el título horizontalmente */
-    text-align: center; /* Centra el texto */
-    max-width: 600px; /* Opcional: establece un ancho máximo */
-    transform: translateX(40px); /* Mueve el título 10 píxeles a la derecha */
-}
-
-.logo {
-    width: 80px; /* Aumenta el ancho según tus necesidades */
-    height: auto; /* Mantiene la relación de aspecto */
-    margin-right: 10px; /* Espacio entre el logo y el texto */
-}
-
-.navbar {
-    display: flex; /* Utiliza flexbox */
-    align-items: center; /* Centra verticalmente los elementos */
-    padding: 10px; /* Ajusta el espacio interno si es necesario */
-}
-
-.navbar-logo {
-    display: flex; /* Asegúrate de que el logo sea un contenedor flex */
-    align-items: center; /* Centra verticalmente el logo */
-}
-
-.navbar-button {
-    background-color: #4CAF50; /* Color de fondo */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno */
-    text-align: center; /* Centrar texto */
-    text-decoration: none; /* Sin subrayado */
-    display: inline-block; /* Permitir establecer dimensiones */
-    font-size: 16px; /* Tamaño de la fuente */
-    margin: 4px 2px; /* Espaciado entre botones */
-    cursor: pointer; /* Cambiar cursor al pasar por encima */
-    border-radius: 4px; /* Bordes redondeados */
-    transition: background-color 0.3s; /* Efecto de transición */
-}
-
-/* Efecto al pasar el ratón */
-.navbar-button:hover {
-    background-color: #45a049; /* Color de fondo al pasar el ratón */
-}
+  }
+  
